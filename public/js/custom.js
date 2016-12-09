@@ -31,28 +31,36 @@ event.preventDefault();
 /*====================================
 SLIDER SCRIPTS
 ======================================*/
+$(window).load(function() {
+     // + any other carousel related stuff that has to wait for the images to complete loading
+     $('.carousel').carousel()
+})
+
 
 
 $('#carousel-slider').carousel({
-interval: 6000 //TIME IN MILLI SECONDS
+interval: 4000, //TIME IN MILLI SECONDS
+wrap: false,
+hover: false,
 });
 
 
 /*====================================
 VAGAS SLIDESHOW SCRIPTS
 ======================================*/
-$.vegas('slideshow', {
-backgrounds: [
-{ src: 'img/denali.png', fade: 3000, delay: 900000000},
-{ src: 'img/1.jpg', fade: 3000, delay: 900000000 }
-]
-})
+// $.vegas('slideshow', {
+// backgrounds: [
 
-('overlay', {
-/** SLIDESHOW OVERLAY IMAGE **/
-src: 'js/vegas/overlays/06.png' // THERE ARE TOTAL 01 TO 15 .png IMAGES AT THE PATH GIVEN, WHICH YOU CAN USE HERE
-});
+// { src: 'img/denali.png', fade: 9000, delay: 19000},
+// { src: 'img/1.jpg', fade: 2000, delay: 9000
+//  }
+// ]
+// })
 
+// ('overlay', {
+// /** SLIDESHOW OVERLAY IMAGE **/
+// src: 'js/vegas/overlays/overlay.png' // THERE ARE TOTAL 01 TO 15 .png IMAGES AT THE PATH GIVEN, WHICH YOU CAN USE HERE
+// });
 
 /*====================================
 POPUP IMAGE SCRIPTS
@@ -103,7 +111,35 @@ return false;
 /*====================================
 WRITE YOUR CUSTOM SCRIPTS BELOW
 ======================================*/
-
+ $(document).ready(function(){
+ if (Modernizr.touch) {
+        // show the close overlay button
+        $(".close-overlay").removeClass("hidden");
+        // handle the adding of hover class when clicked
+        $(".img").click(function(e){
+            if (!$(this).hasClass("hover")) {
+                $(this).addClass("hover");
+            }
+        });
+        // handle the closing of the overlay
+        $(".close-overlay").click(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            if ($(this).closest(".img").hasClass("hover")) {
+                $(this).closest(".img").removeClass("hover");
+            }
+        });
+    } else {
+        // handle the mouseenter functionality
+        $(".img").mouseenter(function(){
+            $(this).addClass("hover");
+        })
+        // handle the mouseleave functionality
+        .mouseleave(function(){
+            $(this).removeClass("hover");
+        });
+    }
+});
 
 
 
