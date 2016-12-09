@@ -69,14 +69,14 @@
 <div class="overlayBack background">
       
 <div id="home" >
-       <div id="workDiv"><span class="slideWork animated"> <h1>Shall We?</h1></span>
-            <span class="slideWorkRight animated"> <h1>Do It</h1></span>
+       <div id="workDiv"><span class="slideWorkLeft slideWork  animated"> <h1>Shall We?</h1></span>
+            <span class="slideWork slideWorkRight animated"> <h1>Do It</h1></span>
        </div>
         <div class="workBtn ">
-            <a href="#services" class="landBtn animated"><h1>Work </h1></a>
+            <a href="#services" class="landBtn landBtnLeft animated"><h2>Work </h2></a>
             </div>
             <div class="playBtn ">
-            <a href="#services" class="landBtnRight animated"><h1>Play </h1></a>
+            <a href="#services" class="landBtn landBtnRight animated"><h2>Play </h2></a>
             </div>
         <div class="container">
             <div class="row-fluid">

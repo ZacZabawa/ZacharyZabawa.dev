@@ -391,66 +391,77 @@ height: 100vh;
   font-family: 'Oswald', sans-serif; 
   font-size: 2em;
 }
+ h2 {
+  font-family: 'jaapokki';
+ }
  h3 {
   font-family: 'Fauna One', serif; 
   font-size: 20px
 }
-.landBtnRight {
-z-index: 1000;
+
+.landBtn {
+  z-index: 1000;
 padding-top: 0px;
-background-color:white;
 box-shadow: 0 20px 80px 0 rgba(0,0,0,.55);
 opacity: .9;
-color: black;
-border: 1.5px solid rgb(102, 102, 102);
 width: 250px;
-  height: 100px;
+  height: 80px;
   position: absolute;
-  right: 30px;
   bottom: 44vh;
-  animation-name: slideInRight;
-   -webkit-animation-delay:20s;
+  border: 1.5px solid rgb(102, 102, 102);
+-webkit-animation-delay:20s;
         -moz-animation-delay:3s;
         -o-animation-delay:3s;
         animation-delay:7s;
         animation-iteration-count: 1;
-        }
+      }
 
-.slideWorkRight {
-text-align: center center;
-z-index: 900;
-width: 33Vw;
-height: 110vh;
-position: absolute;
-right:0px;
-bottom: 0px;
-background-color: #243245;
-opacity:.8;
-animation-name: slideInRight;
-   -webkit-animation-delay:20s;
-        -moz-animation-delay:3s;
-        -o-animation-delay:3s;
-        animation-delay:12s;
-        animation-iteration-count: 1;
+.landBtnRight {
+background-color:white;
+color: black;
+right: 5px;
+    animation-name: slideInRight;
+   
+        }
+.landBtnLeft {
+background-color:#243245;
+opacity: .9;
+color: #fff;
+left: 5px;
+animation-name: slideInLeft;
 
 }
 
 .slideWork {
-text-align: center center;
+  text-align: center center;
 z-index: 900;
 width: 33Vw;
-height: 120vh;
+height: 110vh;
 position: absolute;
-bottom: 0px;
-left:0px;
-background-color: white;
-opacity:.8;
-animation-name: slideInLeft;
-   -webkit-animation-delay:20s;
+-webkit-animation-delay:20s;
         -moz-animation-delay:3s;
         -o-animation-delay:3s;
         animation-delay:12s;
         animation-iteration-count: 1;
+bottom: 0px; 
+}
+.slideWorkRight {
+
+right:0px;
+background-color: #243245;
+opacity:.8;
+animation-name: slideInRight;
+   
+
+}
+
+.slideWorkLeft{
+
+left:0px;
+background-color: white;
+opacity:.8;
+animation-name: slideInLeft;
+
 
 }
 /*.hoverWork:hover {
@@ -469,33 +480,12 @@ animation-name: slideInLeft;
    transform: translateX(200px);
  }
 }*/
-.landBtnRight::hover {
+.landBtn::hover {
   c
   -webkit-animation: rubberBand 1s;
     animation-name: rubberBand 1s;
 }
-.landBtn {
-z-index: 1000;
-box-shadow: 0 20px 80px 0 rgba(0,0,0,.55);
-padding-top: 25px;
-background-color:#243245;
-opacity: .9;
-color: #fff;
-border: 1.5px solid rgb(102, 102, 102);
-width: 250px;
-  height: 100px;
-  position: absolute;
-  left: 30px;
-  bottom: 44vh;
-  animation-name: slideInLeft;
-   -webkit-animation-delay:20s;
-        -moz-animation-delay:3s;
-        -o-animation-delay:3s;
-        animation-delay:7s;
-        animation-iteration-count: 1;
-        
 
-}
  
 /*.hoverWork:hover {
  animation: tilt 2s linear ;
