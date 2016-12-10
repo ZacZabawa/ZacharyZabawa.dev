@@ -142,7 +142,7 @@ WRITE YOUR CUSTOM SCRIPTS BELOW
 });
 
 
-
+$('#yourElement').addClass('animated bounceOutLeft');
 
 
 

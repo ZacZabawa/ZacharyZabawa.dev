@@ -30,6 +30,7 @@ GOOGLE FONT
 GENERAL STYLES
 ============================================================ */
 body {
+overflow-x: hidden;
 font-weight: 500;
 font-family:'Fauna+One', serif;
 font-size: 20px;
@@ -69,11 +70,10 @@ margin-left: -100px;
 }
 .col-centered {
     display:inline-block;
-    float:none;
+ 
     /* reset the text-align */
     text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
+    
 }
 .pad-bottom {
 padding-bottom: 60px;
@@ -375,16 +375,23 @@ HOME SECTION STYLES
 text-align: center;
 padding-top:20px;
 height: 100vh;
+
 }
 
-#workDiv h1 {
+#home h1 {
   font-size: 3em;
   text-align: center center;
   vertical-align: middle;
   line-height: 100vh;
-  color:Black;
+ 
   
 }
+
+.workBtn h1 {
+
+}
+
+
 #home p {
 	 line-height: 10px;
    letter-spacing: 3px;
@@ -412,7 +419,7 @@ width: 250px;
 -webkit-animation-delay:20s;
         -moz-animation-delay:3s;
         -o-animation-delay:3s;
-        animation-delay:7s;
+        animation-delay:15s;
         animation-iteration-count: 1;
       }
 
@@ -438,29 +445,25 @@ z-index: 900;
 width: 33Vw;
 height: 110vh;
 position: absolute;
--webkit-animation-delay:20s;
-        -moz-animation-delay:3s;
-        -o-animation-delay:3s;
-        animation-delay:12s;
-        animation-iteration-count: 1;
+color:black;
 bottom: 0px; 
 }
 .slideWorkRight {
 
 right:0px;
 background-color: #243245;
-opacity:.8;
-animation-name: slideInRight;
+opacity:.0;
+
    
 
 }
 
 .slideWorkLeft{
-
+color:white;
 left:0px;
 background-color: white;
-opacity:.8;
-animation-name: slideInLeft;
+opacity:.0;
+
 
 
 }
@@ -480,11 +483,29 @@ animation-name: slideInLeft;
    transform: translateX(200px);
  }
 }*/
-.landBtn::hover {
-  c
-  -webkit-animation: rubberBand 1s;
-    animation-name: rubberBand 1s;
-}
+.landBtnLeft:hover + .slideWorkLeft { 
+opacity:.8;
+animation-name: slideInLeft;
+  -webkit-animation-delay:20s;
+        -moz-animation-delay:3s;
+        -o-animation-delay:3s;
+        animation-delay:0s;
+        animation-iteration-count: 1;
+   
+
+   }
+
+.landBtnRight:hover + .slideWorkRight { 
+opacity:.8;
+animation-name: slideInRight;
+  -webkit-animation-delay:20s;
+        -moz-animation-delay:3s;
+        -o-animation-delay:3s;
+        animation-delay:0s;
+        animation-iteration-count: 1;
+   
+
+   }
 
  
 /*.hoverWork:hover {
@@ -552,7 +573,15 @@ transition: all 0.5s ease-in-out;
 
 
 /*Carousel Slider*/
+.carousel-indicators li {
+    width: 5px;
+    height: 5px;
+  }
 
+.carousel-indicators .active {
+  width: 7px;
+    height: 7px;
+}
 .fade-carousel .carousel-indicators > li {
     margin: 0 2px;
     background-color: #f39c12;
@@ -560,8 +589,8 @@ transition: all 0.5s ease-in-out;
     opacity: .7;
 }
 .fade-carousel .carousel-indicators > li.active {
-  width: 5px;
-  height: 5px;
+  width: 2px;
+  height: 2px;
   opacity: .8;
 }
 #carousel-slider {
@@ -592,13 +621,66 @@ color: rgb(57, 171, 111);
 }
 
 
-@media screen and (min-width: 350px) {
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+ .carousel-indicators {
+    position: absolute;
+    top: -77px;
+    left: 19%;
+    z-index: 15;
+   
+    padding-left: 0;
+    margin-left: 0%;
+    text-align: center;
+    list-style: none;
+}
+.centerLogo {
+  margin-left: -12px;
+}
+
+ #carousel-slider {
+margin-top:20%;
+
+}
+
+ .landBtnRight {
+  bottom: 15%;
+  width: 45%;
+
+  
+ }
+.landBtnLeft {
+  bottom: 15%;
+  width: 45%;
+  
+  
+ }
  #carousel-slider p {
 
-font-size: 2em;
+font-size: .9em;
 line-height: 3rem;
 }
- 
+
+#carousel-slider .bold  {
+
+font-size: 2.5em;
+line-height: 6rem;
+}
+
+#carousel-slider .smBold {
+
+font-size: 2.5em;
+line-height: 6rem;
+}
+
+#carousel-slider .boldPunct {
+
+font-size: 2.5em;
+line-height: 2.6rem;
+}
 }
 @media screen and (min-width: 500px) {
  #carousel-slider p {
@@ -606,6 +688,8 @@ line-height: 3rem;
 font-size: .7em;
 line-height: 3rem;
 }
+ 
+
 }
 
 @media screen and (min-width: 750px) {
@@ -617,6 +701,8 @@ margin: 10px 20px;
 }
 
 }
+
+
 /* =============================================================
 card SECTION STYLES
 ============================================================ */

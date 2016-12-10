@@ -69,14 +69,18 @@
 <div class="overlayBack background">
       
 <div id="home" >
-       <div id="workDiv"><span class="slideWorkLeft slideWork  animated"> <h1>Shall We?</h1></span>
-            <span class="slideWork slideWorkRight animated"> <h1>Do It</h1></span>
-       </div>
+       
         <div class="workBtn ">
             <a href="#services" class="landBtn landBtnLeft animated"><h2>Work </h2></a>
+            <span class="slideWorkLeft slideWork  animated"> <h1>Shall We?</h1></span>
             </div>
             <div class="playBtn ">
             <a href="#services" class="landBtn landBtnRight animated"><h2>Play </h2></a>
+             <span class="slideWork slideWorkRight animated"> <h1>Do It</h1></span>
+            </div>
+
+            <div id="workDiv">
+           
             </div>
         <div class="container">
             <div class="row-fluid">
@@ -111,7 +115,7 @@
                                                         <div class="item">
 
                                                                 <p>
-                                                                    <span id="quot" class="boldPunct2">&ldquo; </span><span class="Bold"> I revel</span> in discovering how complex systems work. While I enjoy the simplicity of solving concrete problems through creativity and engineering, my true passion is grappling with the intangible nature of human systems that lie at the vertices <br><span class="smBold">  economics, culture, and law . . .</span> <span class="boldPunct">"</span>
+                                                                    <span id="quot" class="boldPunct">&ldquo; </span><span class="Bold"> I revel</span> in discovering how complex systems work. While I enjoy the simplicity of solving concrete problems through creativity and engineering, my true passion is grappling with the intangible nature of human systems that lie at the vertices <br><span class="smBold">  economics, culture, and law . . .</span> <span class="boldPunct">"</span>
                                                                 <br>
                                                                 </p>
 
@@ -153,7 +157,7 @@
         
             
 <div class="row animate-in row-centered" data-anim-type="fade-in-up">
-    <div class ="face col-sm-3  col-md-3 col-lg-4 col-centered scroll-me ">
+    <div class ="face col-sm-3  col-md-3 col-lg-4  col-centered scroll-me ">
         <div id="effect-1" class="effects clearfix">
             <div class="img img-responsive">
                 <img src="img/Cover300.png" alt="">
@@ -164,7 +168,7 @@
             </div>
         </div>
     </div>
-    <div id="title" class="col-sm-6  col-md-8 col-lg-8  col-centered scroll-me">
+    <div id="title" class="col-sm-6  col-md-8 col-lg-8 scroll-me">
         <div class="titleCard"
 
         <p >
