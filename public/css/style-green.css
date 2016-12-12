@@ -47,26 +47,32 @@ padding-top: 80px;
 padding-bottom: 40px;
 }
 .row {
-margin-right: -100px;
-margin-left: -100px;
+/*margin-right: -100px;
+margin-left: -100px;*/
 
 }
 
 .overlayBack {
-    padding-right: 20px;
-    padding-left: 20px;
+ 
+ 
     background: url('/img/overlayLrg.png') no-repeat;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+        background-position-y: 117px;
+
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    -o-background-size: contain;
     
     
 
 }
 .row-centered {
     text-align:center;
+
+}
+
+.bumpRight {
+  margin-left: 20px
 }
 .col-centered {
     display:inline-block;
@@ -103,14 +109,17 @@ border-top: 2px solid rgb(57, 171, 111);
 }
 
 .bold {
-text-transform: uppercase;
+color: white;text-transform: uppercase;
 font-size: 55px;
 line-height: 34px;
+opacity: .9;
 }
 .smBold {
+color: white;
 text-transform: uppercase;
 font-size: 45px;
 line-height: 72px;
+opacity: .9;
 }
 
 .boldPunct {
@@ -119,8 +128,10 @@ font-family:'IM Fell English', serif;
 font-weight: 500;
 font-size: 75px;
  vertical-align: text-top;
+ opacity:.6;
 }
 .boldPunct2 {
+
 line-height: 40px;
 font-family:'IM Fell English', serif;
 font-weight: 500;
@@ -131,6 +142,10 @@ font-size: 75px;
 /* =============================================================
 CUSTOM BUTTON STYLES
 ============================================================ */
+.btn {
+  border-radius: 0px;
+}
+
 .button-custom {
 font-size: 18px;
 border-radius: 0px;
@@ -393,7 +408,8 @@ height: 100vh;
 
 
 #home p {
-	 line-height: 10px;
+  color:white;
+   line-height: 10px;
    letter-spacing: 3px;
   font-family: 'Oswald', sans-serif; 
   font-size: 2em;
@@ -532,21 +548,9 @@ a
 .centerLogo {
 	margin: 0 auto;
 }
-#card .titleCard {
 
-max-height: 300px;
-background-color:rgba(51, 51, 51, .95);
-box-shadow: 0 20px 80px 0 rgba(0,0,0,.55);
-text-align: center;
-padding: 30.2px;
-position: absolute;
-}
 
-#title {
-  padding-left: 0px;
-  max-height: 300px;
-  height: 300px;
-}
+
 
 #home .introPic {
 box-shadow: 0 20px 80px 0 rgba(0,0,0,.55);
@@ -573,6 +577,10 @@ transition: all 0.5s ease-in-out;
 
 
 /*Carousel Slider*/
+#slider-body {
+  padding-top: 35px;
+  padding-left:20px;
+}
 .carousel-indicators li {
     width: 5px;
     height: 5px;
@@ -619,7 +627,17 @@ color: rgb(57, 171, 111);
   height: auto;
 
 }
-
+ .carousel-indicators {
+    position: absolute;
+    top:  10px;
+    left: 19%;
+    z-index: 15;
+   
+    padding-left: 0;
+    margin-left: 0%;
+    text-align: center;
+    list-style: none;
+}
 
 /*Phone Portrait*/
 @media only screen 
@@ -638,7 +656,7 @@ color: rgb(57, 171, 111);
     list-style: none;
 }
 .centerLogo {
-  margin-left: -12px;
+  
 }
 
  #carousel-slider {
@@ -681,14 +699,30 @@ line-height: 6rem;
 font-size: 2.5em;
 line-height: 2.6rem;
 }
+
+#card {
+height: 90vh;
+
+}
+
+#card .titleCard {
+
+max-height: auto;}
+.bumpRight {
+  margin-left: auto;
+}
+
 }
 
 @media only screen 
-  and (min-device-width: 375px) 
+  and (min-device-width: 320px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
-
+.bumpRight {
+  margin-right: 0px;
+  margin-left: 0px;
+}
      #carousel-slider {
 padding-top: 0px; 
 margin-top:0%;
@@ -731,13 +765,18 @@ margin: 10px 20px;
 /* =============================================================
 card SECTION STYLES
 ============================================================ */
-#card .row {
+#card {
+
+
+}
+/*#card .row {
+
   margin-top: 200px;
   max-height: 300px;
   margin-top: 250px;
-margin-bottom: 100px;}
+margin-bottom: 100px;}    
 
-
+*/
 h1 {
 font-family: jaapokki;
 font-size: 2.5em;
@@ -749,12 +788,28 @@ display: block;
 margin: 50px 20px;
 }
 
-#card .face {
+#card .titleCard {
 
+max-height: 300px;
+background-color:rgba(51, 51, 51, .95);
+box-shadow: 0 20px 80px 0 rgba(0,0,0,.55);
+text-align: center;
+padding: 12.5px;
+position: absolute;
+}
+
+#card .face {
+ float:none;
 padding: 0px;
 height: 300px;
 width:300px;
 box-shadow: 0 20px 80px 0 rgba(0,0,0,.55)
+}
+
+#title {
+  padding-left: 0px;
+ 
+  height: 300px;
 }
 
 /* =============================================================
@@ -895,11 +950,11 @@ transition-duration: 0.8s;
 
 #work .work-wrapper {
 padding: 10px;
-border-radius: 5px;
+
 -moz-border-radius: 5px;
--webkit-border-radius: 5px;
+
 margin-bottom: 40px;
-background-color: rgba(255, 255, 255, 0.1);
+background-color: white;
 cursor: pointer;
 -webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.5s ease-in-out;

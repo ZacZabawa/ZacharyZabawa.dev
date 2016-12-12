@@ -15,9 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+
 Auth::routes();
 
-Route::get('trouble', 'troubleController@index');
+Route::get('trouble', 'troubleController@tumblrAPI');
 
 
 

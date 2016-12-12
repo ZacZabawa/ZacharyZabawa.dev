@@ -75,7 +75,7 @@
             <span class="slideWorkLeft slideWork  animated"> <h1>Shall We?</h1></span>
             </div>
             <div class="playBtn ">
-            <a href="#services" class="landBtn landBtnRight animated"><h2>Play </h2></a>
+            <a href="{{ url('/trouble') }}" class="landBtn landBtnRight animated"><h2>Play </h2></a>
              <span class="slideWork slideWorkRight animated"> <h1>Do It</h1></span>
             </div>
 
@@ -85,7 +85,7 @@
         <div class="container">
             <div class="row-fluid">
                 
-                     <div class="col-sm-8 col-md-12 col-lg-12 " id-"slider-body">
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="slider-body">
                        
                         <div id="carousel-slider" data-ride="carousel" class="carousel slide  animate-in" data-anim-type="fade-in-up">
                          
@@ -156,7 +156,7 @@
 
         
             
-<div class="row animate-in row-centered" data-anim-type="fade-in-up">
+<div class="row animate-in row-centered bumpRight" data-anim-type="flip-in-up">
     <div class ="face col-sm-3  col-md-3 col-lg-4  col-centered scroll-me ">
         <div id="effect-1" class="effects clearfix">
             <div class="img img-responsive">
@@ -457,7 +457,7 @@ ADVANCE
 <div class="container">
 <div class="row text-center header animate-in" data-anim-type="fade-in-up">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-<h3>Our Works</h3>
+<h3>Recent Works</h3>
 <hr />
 </div>
 </div>
@@ -474,7 +474,7 @@ ADVANCE
 </div>
 <div class="row text-center animate-in" data-anim-type="fade-in-up" id="work-div">
 
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 html">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 html">
 <div class="work-wrapper">
 
 <a class="fancybox-media" title="Image Title Goes Here" href="img/portfolio/1.jpg">
@@ -484,7 +484,7 @@ ADVANCE
 <h4>Morbi mollis lectus et ipsum</h4>
 </div>
 </div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 html css">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 html css">
 <div class="work-wrapper">
 
 <a class="fancybox-media" title="Image Title Goes Here" href="img/portfolio/2.jpg">
@@ -495,7 +495,7 @@ ADVANCE
 <h4>Morbi mollis lectus et ipsum</h4>
 </div>
 </div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 code script">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 code script">
 <div class="work-wrapper">
 
 <a class="fancybox-media" title="Image Title Goes Here" href="img/portfolio/3.jpg">
@@ -506,7 +506,7 @@ ADVANCE
 <h4>Morbi mollis lectus et ipsum</h4>
 </div>
 </div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 html script">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 html script">
 <div class="work-wrapper">
 
 <a class="fancybox-media" title="Image Title Goes Here" href="img/portfolio/4.jpg">
@@ -517,7 +517,7 @@ ADVANCE
 <h4>Morbi mollis lectus et ipsum</h4>
 </div>
 </div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 html code">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 html code">
 <div class="work-wrapper">
 
 <a class="fancybox-media" title="Image Title Goes Here" href="img/portfolio/5.jpg">
@@ -528,7 +528,7 @@ ADVANCE
 <h4>Morbi mollis lectus et ipsum</h4>
 </div>
 </div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 script">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 script">
 <div class="work-wrapper">
 
 <a class="fancybox-media" title="Image Title Goes Here" href="img/portfolio/6.jpg">

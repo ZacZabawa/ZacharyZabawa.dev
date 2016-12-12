@@ -6200,7 +6200,7 @@ button.close {
 }
 .carousel-indicators {
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   left: 50%;
   z-index: 15;
   width: 60%;
