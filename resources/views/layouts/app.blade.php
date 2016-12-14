@@ -20,7 +20,8 @@
 <!-- FANCYBOX POPUP STYLES -->
 <!-- animate.css -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
+<link href="css/leaflet.css" rel="stylesheet" />
+<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
 <link href="js/source/jquery.fancybox.css" rel="stylesheet" />
 <!-- STYLES FOR VIEWPORT ANIMATION -->
 <link href="css/animations.min.css" rel="stylesheet" />
@@ -70,82 +71,70 @@
       
 <div id="home" >
        
-        <div class="workBtn ">
-            <a href="#services" class="landBtn landBtnLeft animated"><h2>Work </h2></a>
-            <span class="slideWorkLeft slideWork  animated"> <h1>Shall We?</h1></span>
+            <div class="workBtn ">
+                <a href="#services" class="landBtn landBtnLeft animated"><h2>Work </h2></a>
+                <span class="slideWorkLeft slideWork  animated"> <h1>Shall We?</h1></span>
             </div>
             <div class="playBtn ">
-            <a href="{{ url('/trouble') }}" class="landBtn landBtnRight animated"><h2>Play </h2></a>
-             <span class="slideWork slideWorkRight animated"> <h1>Do It</h1></span>
+                <a href="{{ url('/trouble') }}" class="landBtn landBtnRight animated"><h2>Play </h2></a>
+                <span class="slideWork slideWorkRight animated"> <h1>Do It</h1></span>
             </div>
 
-            <div id="workDiv">
-           
-            </div>
-        <div class="container">
-            <div class="row-fluid">
-                
-                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="slider-body">
+    <div class="container">
+        <div class="row-fluid">
+             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="slider-body">
+                 <div id="carousel-slider" data-ride="carousel" class="carousel slide  animate-in" data-anim-type="fade-in-up">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                                <div class= "img-fluid">
+                                    <img class="introPic" src="img/IntroPic.png">
+                                </div>                                                                      
+                        </div>
                        
-                        <div id="carousel-slider" data-ride="carousel" class="carousel slide  animate-in" data-anim-type="fade-in-up">
-                         
-                            <div class="carousel-inner">
-                                                        <div class="item active">
-                                                                
-                                                                
-                                                               <div class= "img-fluid">
-                                                                        
-                                                                        <img class="introPic" src="img/IntroPic.png">
-                                                                </div>                                                                      
-                                                               
-                                                                                                                       </div>
+                        <div class="item">
 
-
-
-                                                        <div class="item">
-
-                                                                <p>
-                                                                    <span class="boldPunct">&ldquo; </span>I would like to think of myself as a      <br><span class="bold">pragmatic idealist</span> <br>with some <br><span class="smBold">perpetual learning </span><br>tendencies . . .<span class="boldPunct"> "</span></span> 
-                                                                     <br><BR><br>
-                                                                </p>
-
-                                                        </div>
-       
-
-                                                        <div class="item">
-
-                                                                <p>
-                                                                    <span id="quot" class="boldPunct">&ldquo; </span><span class="Bold"> I revel</span> in discovering how complex systems work. While I enjoy the simplicity of solving concrete problems through creativity and engineering, my true passion is grappling with the intangible nature of human systems that lie at the vertices <br><span class="smBold">  economics, culture, and law . . .</span> <span class="boldPunct">"</span>
-                                                                <br>
-                                                                </p>
-
-                                                        </div>
-                                                
-                                                        <div class="item">
-                                                            <div class="centerLogo img-fluid">
-                                                                <img src="img/logotransMed.png" >
-                                                            </div>
-                                                        </div>
-
-                                                </div>
-
-        <ol class="carousel-indicators">
-        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#bs-carousel" data-slide-to="1"></li>
-        <li data-target="#bs-carousel" data-slide-to="2"></li>
-    <li data-target="#bs-carousel" data-slide-to="3"></li>
-        </ol>
+                                <p>
+                                    <span class="boldPunct">&ldquo; </span>I would like to think of myself as a      <br><span class="bold">pragmatic idealist</span> <br>with some <br><span class="smBold">perpetual learning </span><br>tendencies . . .<span class="boldPunct"> "</span></span> 
+                                     <br><BR><br>
+                                </p>
 
                         </div>
-                </div>
-</div>
+       
 
-<svg class="arrows">
+                        <div class="item">
+
+                                <p>
+                                    <span id="quot" class="boldPunct">&ldquo; </span><span class="Bold"> I revel</span> in discovering how complex systems work. While I enjoy the simplicity of solving concrete problems through creativity and engineering, my true passion is grappling with the intangible nature of human systems that lie at the vertices <br><span class="smBold">  economics, culture, and law . . .</span> <span class="boldPunct">"</span>
+                              
+                                </p>
+
+                        </div>
+                                                
+                        <div class="item">
+                                        <div class="centerLogo img-fluid">
+                                            <img src="img/logotransMed.png">
+                                        </div>
+                        </div>
+                    </div>
+
+                        <ol class="carousel-indicators">
+                        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#bs-carousel" data-slide-to="1"></li>
+                        <li data-target="#bs-carousel" data-slide-to="2"></li>
+                        <li data-target="#bs-carousel" data-slide-to="3"></li>
+                        </ol>
+
+                 </div>
+            </div>
+
+
+                    <svg class="arrows">
                             <path class="a1" d="M0 0 L30 32 L60 0"></path>
                             <path class="a2" d="M0 20 L30 52 L60 20"></path>
                             <path class="a3" d="M0 40 L30 72 L60 40"></path>
                         </svg>
 
+    </div>
 </div>
 </div>
 {{-- HOME SECTION END --}}
@@ -171,20 +160,21 @@
     <div id="title" class="col-sm-6  col-md-8 col-lg-8 scroll-me">
         <div class="titleCard"
 
-        <p >
+        <p>
       
                 <h1> Researcher / Facilitator / Creator </h1>
 
                 <h3>Finding unique solutions is my speciality</h3>
 
         </p>
-
+<div class="backBox animate-in" data-anim-type="fade-in-down">
 <div class="social">
 <a href="https://www.facebook.com/zac.zabawa" class="btn button-custom btn-custom-one" ><i class="fa fa-facebook "></i></a>
 <a href="https://www.instagram.com/z.zabawa175" class="btn button-custom btn-custom-one" ><i class="fa fa-instagram"></i></a>
 <a href="#" class="btn button-custom btn-custom-one" ><i class="fa fa-linkedin "></i></a>
 <a href="https://github.com/ZacZabawa" class="btn button-custom btn-custom-one" ><i class="fa fa-github "></i></a>
 </div>
+
 </div>
 
 </div>
@@ -543,7 +533,7 @@ ADVANCE
 </div>
 </section>
 <!--WORK SECTION END-->
-<!--TEAM SECTION START-->
+{{-- <!--TEAM SECTION START-->
 <section id="team" >
 <div class="container">
 <div class="row text-center header animate-in" data-anim-type="fade-in-up">
@@ -616,7 +606,7 @@ Vivamus eget finibus massa.
 
 </div>
 </div>
-</section>
+</section> --}}
 <!--TEAM SECTION END-->
 <!--GRID SECTION START-->
 {{-- <section id="grid" >
@@ -742,60 +732,65 @@ consectetur tellus nec, porttitor nulla.
 <!--GRID SECTION END-->
 </div>
 <!--CONTACT SECTION START-->
-<section id="contact" >
-<div class="container">
-<div class="row text-center header animate-in" data-anim-type="fade-in-up">
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<section id="footer" >
+ <div >
+    <div class="contact-wrapper">
+      <div class="row-fluid">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 noPadRight">
+          <div class='custom-popup' id="mapid">
+          <div class="text"><p>Most Likely You Can Find Me Here</p></div> 
+        </div>
+    </div> 
 
-<h3>Contact Details </h3>
-<hr />
+ <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" >
 
-</div>
-</div>
+<div id="contact">
+        <div class="contact-inner">
 
-<div class="row animate-in" data-anim-type="fade-in-up">
+            
 
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-<div class="contact-wrapper">
-<h3>Reach </h3>
-<p>
-Aliquam tempus ante placerat,
-consectetur tellus nec, porttitor nulla.
-</p>
-<div class="social-below">
-<a href="#" class="btn button-custom btn-custom-two" > Facebook</a>
-<a href="#" class="btn button-custom btn-custom-two" > Twitter</a>
-<a href="#" class="btn button-custom btn-custom-two" > Google +</a>
+            <div class="contact">
+                <h1>CONTACT ME</h1>
+                <form class="form-horizontal" role="form">
+                        <div class="form-group">  
+                              <div class="col-sm-12">
+                                <input id="name" name="name" type="text" placeholder="NAME" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-group">  
+                              <div class="col-sm-12">
+                                <input id="email" name="email" type="email" placeholder="EMAIL" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-group">  
+                              <div class="col-sm-12">
+                                <textarea class="form-control" id="message" name="message" placeholder="MESSAGE"></textarea>
+                              </div>
+                            </div>
+                            <button id="send" name="send" class="btn btn-block animated">send</button>
+                 </form>
+        </div>
+        
+        <div class="social"> 
+            <h1>CONNECT</h1>
+                
+                <a href="https://www.facebook.com/zac.zabawa" class="btn button-custom btn-custom-one" ><i class="fa fa-facebook "></i></a>
+                <a href="https://www.instagram.com/z.zabawa175" class="btn button-custom btn-custom-one" ><i class="fa fa-instagram"></i></a>
+                <a href="#" class="btn button-custom btn-custom-one" ><i class="fa fa-linkedin "></i></a>
+                <a href="https://github.com/ZacZabawa" class="btn button-custom btn-custom-one" ><i class="fa fa-github "></i></a>
+        </div>
+        
 </div>
-</div>
-
-</div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-<div class="contact-wrapper">
-<h3>Quick Contact</h3>
-<h4><strong>Email : </strong> z.zabawa175.com </h4>
-<h4><strong>Call : </strong> 778-251-2672 </h4>
-<h4><strong>Skype : </strong> Yujhaeu78 </h4>
-</div>
-
-</div>
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-<div class="contact-wrapper">
-<h3>Address : </h3>
-<h4>230/45 , New way Lane , </h4>
-<h4>United States</h4>
-<div class="footer-div" >
-&copy; 2015 YourDomain | <a href="http://www.designbootstrap.com/" target="_blank" >by DesignBootstrp</a>
-</div>
-</div>
-
-</div>
-
-</div>
-
-
 </div>
 
+</div>
+
+
+          
+     </div>
+     
+    </div>
+</div>
 </section>
 </div>
 <!--CONTACT SECTION END-->
@@ -805,7 +800,10 @@ consectetur tellus nec, porttitor nulla.
 <script src="js/jquery-1.11.1.js"></script>
 <!-- BOOTSTRAP SCRIPTS -->
 <script src="js/bootstrap.js"></script>
+
+
 <!-- modernizing SCRIPTS PLUGIN -->
+
 <script src="js/modernizr.js"></script>
 <!-- EASING SCROLL SCRIPTS PLUGIN -->
 <script src="js/vegas/jquery.vegas.min.js"></script>
@@ -819,7 +817,10 @@ consectetur tellus nec, porttitor nulla.
 <script src="js/appear.min.js"></script>
 <script src="js/animations.min.js"></script>
 <!-- CUSTOM SCRIPTS -->
-<script src="js/custom.js"></script>
-</body>
+<script src="js/leaflet.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
 
+<script src="js/custom.js"></script>
+
+</body>
 </html>

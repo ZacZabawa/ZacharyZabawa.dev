@@ -106,7 +106,89 @@ return false;
 
 });
 
+/*====================================
+Leaflet SCRIPTS
+======================================*/
+// var map;
 
+//  var za = new L.GeoJSON.AJAX('public/van.geojson').addTo(map);
+
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiemFiYXdhMTc1IiwiYSI6ImNpaGNteWhxOTA5Z2x0Y2x6dGZzbXY2YXkifQ.d9K73AIBjfM3mu2_mq3-Sw';
+
+var map = L.mapbox.map('mapid', 'zabawa175.bv9tr8cs')
+    .setView([49.2678, -122.915],7);
+
+var featureLayer = L.mapbox.featureLayer({
+        type: 'FeatureCollection',
+        features: [{
+            type: 'Feature',
+            properties: {
+                'Location': 'Vancouver, BC',
+                'Email': 'z.zabawa175@gmail.com',
+                'phone': '(778) 251 - 2672',
+                'marker-color': '#548cba',
+                'marker-size': 'large',
+                'marker-symbol': ''
+            },
+            geometry: {
+                type: 'Point',
+                coordinates: [-123.1526, 49.2732]
+            }
+        }]
+    })
+    .addTo(map);
+
+featureLayer.eachLayer(function(layer) {
+ var content = 
+        ' <ul> <li> <p><span class="icon ion-ios-navigate-outline"><\/span>' + layer.feature.properties.Location + '</li>' +
+        '<li><p><span class="icon ion-ios-email-outline"><\/span>' + layer.feature.properties.Email + '<\/p><\/li>' +
+        '<li class="noUl"><p><span class="icon ion-ios-telephone-outline"><\/span>' + layer.feature.properties.phone + '<\/p><\/li><\/ul>';
+    layer.bindPopup(content);
+});
+// bound script should work
+
+// L.mapbox.accessToken = 'pk.eyJ1IjoiemFiYXdhMTc1IiwiYSI6ImNpaGNteWhxOTA5Z2x0Y2x6dGZzbXY2YXkifQ.d9K73AIBjfM3mu2_mq3-Sw';
+
+// var southWest = L.latLng(39.1982, -140.2734),
+//     northEast = L.latLng(54.9524, -101.2061),
+//     bounds = L.latLngBounds(southWest, northEast); 
+
+
+
+// var map = L.mapbox.map('mapid', 'zabawa175.bv9tr8cs', {
+//     maxBounds: bounds,
+//     maxZoom: 6,
+//     minZoom: 8
+// });
+
+// map.fitBounds(bounds);
+
+
+// map.fitBounds(za.getBounds());
+// var mapquestOSM = new L.TileLayer("http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png", {
+//             maxZoom: 17,
+//             subdomains: ["otile1", "otile2", "otile3", "otile4"],
+//             attribution: 'Tiles courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a>. Map data (c) <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, CC-BY-SA.'
+//         });
+// var mbTiles = new L.tileLayer('public/mapTiles/mbtiles.php?db=Zmap.mbtiles&z={z}&x={x}&y={y}', {
+//             tms: true,
+//             attribution: 'Tiles Courtesy of <a href="http://tiles.mapbox.com/mapbox/map/geography-class" target="_blank">MapBox</a>',
+//             opacity: 0.7
+//         });
+
+// var map = new L.Map("mapid",{
+//             zoom: 3,
+//             center: [36.315125, -88.769531],
+//         });
+
+// var map = L.map('mapid', {
+//     center: [50, 30],
+//     zoom: 5
+// });
+
+
+// var mb = L.tileLayer.mbTiles('public/mapTiles/Zmap1.mbtiles').addTo(map);
 
 /*====================================
 WRITE YOUR CUSTOM SCRIPTS BELOW

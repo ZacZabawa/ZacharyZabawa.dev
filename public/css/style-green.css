@@ -70,6 +70,25 @@ margin-left: -100px;*/
     text-align:center;
 
 }
+.noSidePad {
+  padding-right: 0px;
+padding-left: 0px;
+}
+.noPadRight {
+  padding-right: 0px;
+
+}
+
+.noSideMargin {
+  margin-right: 0px;
+margin-left: 0px;
+}
+.noMarginRight {
+  margin-right: 0px;
+}
+
+
+
 
 .bumpRight {
   margin-left: 20px
@@ -644,6 +663,21 @@ color: rgb(57, 171, 111);
   and (min-device-width: 320px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) {
+.smBold {
+
+font-size: .75em; 
+}
+
+.overlayBack {
+ background: url('/img/overlaySml.png') no-repeat;
+        
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+} 
+
  .carousel-indicators {
     position: absolute;
     top: -77px;
@@ -661,17 +695,24 @@ color: rgb(57, 171, 111);
 
  #carousel-slider {
 margin-top:20%;
-
+margin-bottom:300px;
 }
 
+.landBtn {
+background-color: transparent;
+border-width: 0px;
+opacity: 1;
+}
  .landBtnRight {
-  bottom: 15%;
+  right: -10px;
+  top: 5%;
   width: 45%;
 
   
  }
 .landBtnLeft {
-  bottom: 15%;
+  left:-10px;
+  top: 5%;
   width: 45%;
   
   
@@ -706,10 +747,26 @@ height: 90vh;
 }
 
 #card .titleCard {
-
+z-index: 10;
 max-height: auto;}
+
 .bumpRight {
-  margin-left: auto;
+  margin-left: 0;
+}
+
+.backBox {
+
+background-color: white;
+animation-name: slideInLeft;
+  -webkit-animation-delay:20s;
+        -moz-animation-delay:3s;
+        -o-animation-delay:3s;
+        animation-delay:0s;
+        animation-iteration-count: 1;
+z-index: 1;
+
+
+
 }
 
 }
@@ -719,6 +776,9 @@ max-height: auto;}
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
+ 
+
+
 .bumpRight {
   margin-right: 0px;
   margin-left: 0px;
@@ -1060,23 +1120,241 @@ color: rgb(57, 171, 111);
 /*============================
 CONTACT SECTION STYLES
 ==============================*/
+.contact-wrapper {
+  background-color: #8b9bb0;
+  height: 60vh;
+}
 
-#contact .contact-wrapper {
-background-color:rgba(255, 255, 255, 0.1);
-padding: 20px;
-border-radius: 5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-margin-bottom: 40px;
-min-height:200px;
+#mapid {
+  height: 60vh;
+  padding: 10px;
 }
-#contact .contact-wrapper h3 {
-color:rgb(57, 171, 111);
+#mapid .text {
+ font-weight: 500;
+  z-index: 1000;
+  text-transform: uppercase;
+  text-align: right;
+  position:absolute;
+  right:50%;
+  top:5%;
 }
-#contact .social-below {
-display: block;
-margin-top: 5px;
+.custom-popup .leaflet-popup-content-wrapper {
+  font-family: 'Raleway';
+  background:#d6d7d8;
+  color:black;
+  font-size:16px;
+  line-height:24px;
+  }
+
+.custom-popup .leaflet-popup-content {
+/*padding-right: 0px;
+padding-left: 0px;*/
+
 }
+
+.custom-popup .leaflet-popup-content-wrapper p {
+  font-size: 1.1em;
+}
+.custom-popup .leaflet-popup-content-wrapper h2 {
+  font-size: 2em;
+  text-align: center;
+  color:rgba(48, 100, 144, 0.6);
+}
+.custom-popup .leaflet-popup-content-wrapper ul {
+list-style-type: none;
+padding-left: 0px;
+}
+
+.custom-popup .leaflet-popup-content-wrapper li {
+ border-bottom: solid thin rgba(48, 100, 144, 0.6);
+  padding: 16px 10px 10px 10px;
+  white-space: nowrap;
+  vertical-align:middle;
+}
+
+
+.custom-popup .leaflet-popup-content-wrapper:after {
+  content: '';
+  position: absolute;
+ 
+  left: 50%;
+  transform: translate(-50%,-50%)rotate(45deg);
+
+    background: rgb(214, 215, 216);
+    height: 4rem;
+    width: 4rem;
+}
+
+.custom-popup .leaflet-popup-content .icon {
+  
+  font-size:1.5em;
+  min-width: 45px;
+  display: inline-block;
+  text-align: center;
+  border-right: solid thin rgba(48, 100, 144, 0.6);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.custom-popup .leaflet-popup-content .noUl {
+  border-bottom: none;
+} 
+
+
+.custom-popup .leaflet-popup-content-wrapper a {
+  color:rgba(255,255,255,0.5);
+  ox-shadow: 0 20px 80px 0 rgba(0,0,0,.55);
+  }
+.custom-popup .leaflet-popup-tip-container {
+  width:30px;
+  height:15px;
+  }
+
+
+
+#contact {
+
+    display: table;
+    width: 100%; /* This could be ANY width */
+    height: 60vh; /* This could be ANY height */
+
+}
+.contact-inner {
+   display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+}
+#contact h1 {
+ margin:0 auto;
+  width:100%;
+  text-align: center;
+  background-color: #30445c;
+  box-shadow: 0px 0px 100px rgba(0,0,0,0.05);
+  color: white;
+  font-size: 1em;
+  font-weight: 300;
+  max-width: 450px;
+  padding:12px 10px 10px 10px;
+  letter-spacing: 4px;
+}
+
+#contact .social .btn{
+border: none;
+color: black;
+margin:25px 35px 25px 35px;
+}
+
+#contact span{
+color:black;
+}
+
+.contactForm {
+
+ display: inline-block;
+vertical-align: middle;
+text-align: center;
+width: 100%;
+max-width:460px; 
+ margin: 0 auto;
+
+}
+
+#contact form{
+  font-family:'Raleway';
+display: inline-block;
+margin:0 auto;
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  background-color: white;
+}
+
+.form-control {
+  
+  box-shadow: none;
+  border-radius: 0;
+  background-color: white;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid gray;
+}
+
+#message textarea{
+  min-height: 300px;
+  resize: vertical;
+  overflow: hidden;
+  border-bottom: 25px;
+}
+
+#send {
+     background-color: #8b9bb0;
+     margin-top: 39px;
+    margin-bottom: 18px;
+  letter-spacing: 4px;
+}
+
+#contact .btn:hover, .btn:focus, .btn.focus {
+    background-color: #d4deea;
+    color: #333;
+    text-decoration: none;
+     animation-name: pulse;
+} {
+  background-color: #30445c;
+}
+
+
+#contact .btn-custom-one:hover {
+  background-color: #8b9bb0
+}
+
+#contact .social{
+ display: inline-block;
+background-color: White;
+margin: 0 auto;
+ display: block;
+    width: 100%;
+max-width: 450px;
+}
+
+#contact a
+
+border-right: 1px solid #DDD;
+
+
+
+
+
+-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+
+
+}
+
+
+
+
+
+
+
+.arrow-up {
+/*  text-align: center;
+  position: relative;
+  top: 1px;
+  width: 0; 
+  height: 0;
+  margin-top: 10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;*/
+}
+
+
+
+
+
+
 .footer-div {
 padding-top:25px;
 }

@@ -1,0 +1,10 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-122.915,49.2678]
+  },
+  "properties": {
+    "name": "Vancouver"
+  }
+}
