@@ -1015,7 +1015,10 @@ CONTACT SECTION STYLES
   background-color: #8b9bb0;
   height: 60vh;
 }
-
+.touchevents #mapid {
+    position: relative;
+    z-index: -1;
+}
 #mapid {
   height: 60vh;
   padding: 10px;

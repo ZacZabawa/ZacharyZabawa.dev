@@ -118,7 +118,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiemFiYXdhMTc1IiwiYSI6ImNpaGNteWhxOTA5Z2x0Y2x6d
 
 var map = L.mapbox.map('mapid', 'zabawa175.bv9tr8cs')
     .setView([49.2678, -123.915],6);
-
+map.dragging.disable();
 var featureLayer = L.mapbox.featureLayer({
         type: 'FeatureCollection',
         features: [{
@@ -149,7 +149,7 @@ featureLayer.eachLayer(function(layer) {
     layer.bindPopup(content);
 });
 
-map.scrollZoom.disable();
+
 // bound script should work
 
 // L.mapbox.accessToken = 'pk.eyJ1IjoiemFiYXdhMTc1IiwiYSI6ImNpaGNteWhxOTA5Z2x0Y2x6dGZzbXY2YXkifQ.d9K73AIBjfM3mu2_mq3-Sw';
