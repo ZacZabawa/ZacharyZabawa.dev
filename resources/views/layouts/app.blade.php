@@ -730,55 +730,34 @@ consectetur tellus nec, porttitor nulla.
 </div>
 </section> --}}
 <!--GRID SECTION END-->
-</div>
+
 <!--CONTACT SECTION START-->
-<section id="footer" >
- <div >
+<section id="footer">
+ <div>
     <div class="contact-wrapper">
       <div class="row-fluid">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 noPadRight">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 noSidePad">
           <div class='custom-popup' id="mapid">
-          <div class="text"><p>Most Likely You Can Find Me Here</p></div> 
+            <div class="contactMobile">
+            <button class='contactBtn'>Contact</button>
+            <div class='contactSlider animated'>
+               @include ('partials.contactForm');
+               <div class="text"><p>Find Me Here</p></div>   
+                </div>  
+            </div>
+            </div>  
+          
         </div>
     </div> 
 
- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" >
+ <div class="col-xs-0 col-sm-0 col-md-4 col-lg-4" >
 
 <div id="contact">
-        <div class="contact-inner">
+        <div class="contactPc">
 
             
 
-            <div class="contact">
-                <h1>CONTACT ME</h1>
-                <form class="form-horizontal" role="form">
-                        <div class="form-group">  
-                              <div class="col-sm-12">
-                                <input id="name" name="name" type="text" placeholder="NAME" class="form-control">
-                              </div>
-                            </div>
-                            <div class="form-group">  
-                              <div class="col-sm-12">
-                                <input id="email" name="email" type="email" placeholder="EMAIL" class="form-control">
-                              </div>
-                            </div>
-                            <div class="form-group">  
-                              <div class="col-sm-12">
-                                <textarea class="form-control" id="message" name="message" placeholder="MESSAGE"></textarea>
-                              </div>
-                            </div>
-                            <button id="send" name="send" class="btn btn-block animated">send</button>
-                 </form>
-        </div>
-        
-        <div class="social"> 
-            <h1>CONNECT</h1>
-                
-                <a href="https://www.facebook.com/zac.zabawa" class="btn button-custom btn-custom-one" ><i class="fa fa-facebook "></i></a>
-                <a href="https://www.instagram.com/z.zabawa175" class="btn button-custom btn-custom-one" ><i class="fa fa-instagram"></i></a>
-                <a href="#" class="btn button-custom btn-custom-one" ><i class="fa fa-linkedin "></i></a>
-                <a href="https://github.com/ZacZabawa" class="btn button-custom btn-custom-one" ><i class="fa fa-github "></i></a>
-        </div>
+            @include ('partials.contactForm');
         
 </div>
 </div>

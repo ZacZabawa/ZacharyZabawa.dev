@@ -117,7 +117,7 @@ Leaflet SCRIPTS
 L.mapbox.accessToken = 'pk.eyJ1IjoiemFiYXdhMTc1IiwiYSI6ImNpaGNteWhxOTA5Z2x0Y2x6dGZzbXY2YXkifQ.d9K73AIBjfM3mu2_mq3-Sw';
 
 var map = L.mapbox.map('mapid', 'zabawa175.bv9tr8cs')
-    .setView([49.2678, -122.915],7);
+    .setView([49.2678, -123.915],6);
 
 var featureLayer = L.mapbox.featureLayer({
         type: 'FeatureCollection',
@@ -139,6 +139,8 @@ var featureLayer = L.mapbox.featureLayer({
     })
     .addTo(map);
 
+
+
 featureLayer.eachLayer(function(layer) {
  var content = 
         ' <ul> <li> <p><span class="icon ion-ios-navigate-outline"><\/span>' + layer.feature.properties.Location + '</li>' +
@@ -146,6 +148,8 @@ featureLayer.eachLayer(function(layer) {
         '<li class="noUl"><p><span class="icon ion-ios-telephone-outline"><\/span>' + layer.feature.properties.phone + '<\/p><\/li><\/ul>';
     layer.bindPopup(content);
 });
+
+map.scrollZoom.disable();
 // bound script should work
 
 // L.mapbox.accessToken = 'pk.eyJ1IjoiemFiYXdhMTc1IiwiYSI6ImNpaGNteWhxOTA5Z2x0Y2x6dGZzbXY2YXkifQ.d9K73AIBjfM3mu2_mq3-Sw';
@@ -191,8 +195,34 @@ featureLayer.eachLayer(function(layer) {
 // var mb = L.tileLayer.mbTiles('public/mapTiles/Zmap1.mbtiles').addTo(map);
 
 /*====================================
+Button animation
+======================================*/
+ $(function() {
+  var box = $('.contactSlider');
+  var button = $('.contactBtn');
+  button.on('click', function(){
+    box.toggleClass('slideInUp');
+    if(box.hasClass('slideInUp'))
+      button.text('Close');
+    else
+      button.text('Contact Me!');
+  });
+});
+$(function() {
+  var box = $('.contactSlider');
+  var button = $('.contactBtn');
+  button.on('click', function(){
+    box.toggleClass('zIndex');
+    
+  });
+});
+/*====================================
 WRITE YOUR CUSTOM SCRIPTS BELOW
 ======================================*/
+
+
+
+
  $(document).ready(function(){
  if (Modernizr.touch) {
         // show the close overlay button

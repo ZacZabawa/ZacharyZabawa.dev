@@ -17,13 +17,12 @@
 /* =============================================================
 GOOGLE FONT
 ============================================================ */
-
-@import url(https://fonts.googleapis.com/css?family=Crimson+Text|Raleway|IM+Fell+English|Fauna+One|Playfair+Display+SC); 
 @font-face {
     font-family: jaapokki;
     src: url(fonts/jaapokki.otf);
   }
-@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text|Raleway|IM+Fell+English|Fauna+One|Playfair+Display+SC); 
+
 
 
 /* =============================================================
@@ -219,7 +218,7 @@ background-color: rgba(0, 0, 0, 0.4);
 border-color: transparent;
 }
 
-.
+
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
 background-color: transparent;
@@ -242,7 +241,7 @@ font-size: 40px;
 font-family: 'jaapokki';
 vertical-align: middle;
 letter-spacing: 3px;
-font-smoothing
+
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
@@ -581,7 +580,7 @@ padding: 20px;
 margin: 0 AUTO;
 max-width: 100%;
 height: 60%;
-position: 
+
 border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
@@ -658,118 +657,7 @@ color: rgb(57, 171, 111);
     list-style: none;
 }
 
-/*Phone Portrait*/
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-.smBold {
 
-font-size: .75em; 
-}
-
-.overlayBack {
- background: url('/img/overlaySml.png') no-repeat;
-        
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-} 
-
- .carousel-indicators {
-    position: absolute;
-    top: -77px;
-    left: 19%;
-    z-index: 15;
-   
-    padding-left: 0;
-    margin-left: 0%;
-    text-align: center;
-    list-style: none;
-}
-.centerLogo {
-  
-}
-
- #carousel-slider {
-margin-top:20%;
-margin-bottom:300px;
-}
-
-.landBtn {
-background-color: transparent;
-border-width: 0px;
-opacity: 1;
-}
- .landBtnRight {
-  right: -10px;
-  top: 5%;
-  width: 45%;
-
-  
- }
-.landBtnLeft {
-  left:-10px;
-  top: 5%;
-  width: 45%;
-  
-  
- }
- #carousel-slider p {
-
-font-size: .9em;
-line-height: 3rem;
-}
-
-#carousel-slider .bold  {
-
-font-size: 2.5em;
-line-height: 6rem;
-}
-
-#carousel-slider .smBold {
-
-font-size: 2.5em;
-line-height: 6rem;
-}
-
-#carousel-slider .boldPunct {
-
-font-size: 2.5em;
-line-height: 2.6rem;
-}
-
-#card {
-height: 90vh;
-
-}
-
-#card .titleCard {
-z-index: 10;
-max-height: auto;}
-
-.bumpRight {
-  margin-left: 0;
-}
-
-.backBox {
-
-background-color: white;
-animation-name: slideInLeft;
-  -webkit-animation-delay:20s;
-        -moz-animation-delay:3s;
-        -o-animation-delay:3s;
-        animation-delay:0s;
-        animation-iteration-count: 1;
-z-index: 1;
-
-
-
-}
-
-}
 
 @media only screen 
   and (min-device-width: 320px) 
@@ -1120,6 +1008,9 @@ color: rgb(57, 171, 111);
 /*============================
 CONTACT SECTION STYLES
 ==============================*/
+#footer {
+  padding-bottom: 0px;
+}
 .contact-wrapper {
   background-color: #8b9bb0;
   height: 60vh;
@@ -1218,13 +1109,81 @@ padding-left: 0px;
     height: 60vh; /* This could be ANY height */
 
 }
-.contact-inner {
+.contactPc {
    display: table-cell;
     vertical-align: middle;
     text-align: center;
     height: 100%;
 }
-#contact h1 {
+.contactMobile {
+  display: none;
+}
+
+
+.contactSlider {
+  
+  position: absolute;
+    left: -500px;
+   top:30%;
+    width: 100%
+    
+  
+}
+.contactMobile .slideInUp {
+  z-index: 1001;
+  -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+    animation-direction: alternate;
+}
+
+.zIndex {
+  left:0px;
+}
+ 
+
+
+
+ .contactBtn {
+height: 100px;
+position: absolute;
+right:10px;
+z-index: 1000;
+display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 5px;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 20px 30px;
+  -webkit-transition: box-shadow;
+
+}
+
+ .contactBtn {
+width: 150px;
+height: 75px;
+position: absolute;
+right:10px;
+z-index: 1000;
+display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 5px;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 20px 30px;
+  -webkit-transition: box-shadow;
+
+}
+
+
+
+#footer h1 {
  margin:0 auto;
   width:100%;
   text-align: center;
@@ -1238,13 +1197,13 @@ padding-left: 0px;
   letter-spacing: 4px;
 }
 
-#contact .social .btn{
+#footer .social .btn{
 border: none;
 color: black;
 margin:25px 35px 25px 35px;
 }
 
-#contact span{
+#footer span{
 color:black;
 }
 
@@ -1259,7 +1218,7 @@ max-width:460px;
 
 }
 
-#contact form{
+#footer form{
   font-family:'Raleway';
 display: inline-block;
 margin:0 auto;
@@ -1296,40 +1255,43 @@ margin:0 auto;
   letter-spacing: 4px;
 }
 
-#contact .btn:hover, .btn:focus, .btn.focus {
+#footer .btn:hover, .btn:focus, .btn.focus {
     background-color: #d4deea;
     color: #333;
     text-decoration: none;
      animation-name: pulse;
-} {
-  background-color: #30445c;
+
+
 }
 
 
-#contact .btn-custom-one:hover {
+#footer .btn-custom-one:hover {
   background-color: #8b9bb0
 }
 
-#contact .social{
+#footer .social{
  display: inline-block;
 background-color: White;
 margin: 0 auto;
- display: block;
+
     width: 100%;
 max-width: 450px;
 }
-
-#contact a
-
-border-right: 1px solid #DDD;
-
-
-
-
-
--moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-
-
+.flex {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid silver;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  
+  justify-content: center;
+  flex-direction: row;
 }
 
 
@@ -1338,29 +1300,134 @@ border-right: 1px solid #DDD;
 
 
 
-.arrow-up {
-/*  text-align: center;
-  position: relative;
-  top: 1px;
-  width: 0; 
-  height: 0;
-  margin-top: 10px;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid white;*/
+
+
+
+
+
+
+
+/*Phone Portrait*/
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+.smBold {
+
+font-size: .75em; 
 }
 
+.overlayBack {
+ background: url('/img/overlaySml.png') no-repeat;
+        
 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+} 
 
-
-
-
-.footer-div {
-padding-top:25px;
+ .carousel-indicators {
+    position: absolute;
+    top: -77px;
+    left: 19%;
+    z-index: 15;
+   
+    padding-left: 0;
+    margin-left: 0%;
+    text-align: center;
+    list-style: none;
 }
-.footer-div a,.footer-div a:hover {
-font-size:10px;
+.centerLogo {
+  
+}
 
-color:#fff;
-text-decoration:none;
+ #carousel-slider {
+margin-top:20%;
+margin-bottom:300px;
+}
+
+.landBtn {
+background-color: transparent;
+border-width: 0px;
+opacity: 1;
+}
+ .landBtnRight {
+  right: -10px;
+  top: 5%;
+  width: 45%;
+
+  
+ }
+.landBtnLeft {
+  left:-10px;
+  top: 5%;
+  width: 45%;
+  
+  
+ }
+ #carousel-slider p {
+
+font-size: .9em;
+line-height: 3rem;
+}
+
+#carousel-slider .bold  {
+
+font-size: 2.5em;
+line-height: 6rem;
+}
+
+#carousel-slider .smBold {
+
+font-size: 2.5em;
+line-height: 6rem;
+}
+
+#carousel-slider .boldPunct {
+
+font-size: 2.5em;
+line-height: 2.6rem;
+}
+
+#card {
+height: 90vh;
+
+}
+
+#card .titleCard {
+z-index: 10;
+max-height: auto;}
+
+.bumpRight {
+  margin-left: 0;
+}
+
+.backBox {
+display:none;
+background-color: white;
+animation-name: slideInLeft;
+  -webkit-animation-delay:20s;
+        -moz-animation-delay:3s;
+        -o-animation-delay:3s;
+        animation-delay:0s;
+        animation-iteration-count: 1;
+z-index: 1;
+  }
+.contactMobile {
+display: table-cell;
+}
+#contact{
+  height: 0px;
+}
+.contactPc {
+display: none;
+
+ }
+.contact-wrapper {
+height: 100vh;
+}
+#mapid
+ {height:100vh;}
+}
 }
